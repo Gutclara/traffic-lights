@@ -7,24 +7,28 @@ import React, { useState } from "react";
 export function Home() {
 	/*const [variable,funcion(que modifica mi varible)] = useState(aca pongo el estado inicial o por defecto, si quiero, sino no pongo nada)*/
 	const [color, setColor] = useState();
+
 	return (
-		<div className="container bg-dark">
-			<div className="color-red">
+		<div id="contenedor" className="container bg-dark">
+			<div>
 				<button
 					type="button"
-					className="btn btn-danger"
-					onClick={() => setColor("red")}></button>
+					id="botonRojo"
+					className={color == "rojoIntenso" ? color : "red"}
+					onClick={() => setColor("rojoIntenso")}></button>
 			</div>
-			<div className="color-yellow">
+			<div>
 				<button
 					type="button"
-					className="btn btn-warning"
+					id="botonAmarillo"
+					/*className="btn btn-warning"*/
 					onClick={() => setColor("yellow")}></button>
 			</div>
 			<div className="color-green">
 				<button
 					type="button"
-					className="btn btn-info"
+					id="botonVerde"
+					/*className="btn btn-info"*/
 					onClick={() => setColor("green")}></button>
 			</div>
 		</div>
