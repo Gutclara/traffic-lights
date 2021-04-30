@@ -21,15 +21,17 @@ export function Home() {
 				<button
 					type="button"
 					id="botonAmarillo"
-					/*className="btn btn-warning"*/
-					onClick={() => setColor("yellow")}></button>
+					className={
+						color == "amarilloIntenso" ? color : "amarillito"
+					}
+					onClick={() => setColor("amarilloIntenso")}></button>
 			</div>
 			<div className="color-green">
 				<button
 					type="button"
 					id="botonVerde"
-					/*className="btn btn-info"*/
-					onClick={() => setColor("green")}></button>
+					className={color == "verdeIntenso" ? color : "verdecito"}
+					onClick={() => setColor("verdeIntenso")}></button>
 			</div>
 		</div>
 	);
